@@ -1,9 +1,9 @@
 ------------------------------------------------------------
--- mini-projet VHDL
--- Enregistrement d'une image
--- S. Rubini, septembre 2015
--- enregistre 1 SEULE IMAGE après reset au format sun raster
--- pas de controle du nombre de pixels recus
+-- VGA SimuLator projet VHDL
+-- Save a picture to a spesific location on the disk
+-- S. Rubini, septembre 2015 
+-- save one picture after the Reset is seted using the sun raster format
+-- no control uppon the count of pixels
 ------------------------------------------------------------
 
 library ieee;
@@ -20,9 +20,6 @@ entity image_file is
 end image_file;
 
 architecture test of image_file is
-
--- signal reset, clk : std_logic := '1';
--- signal r,g,b : std_logic_vector(7 downto 0);
 type IntegerFileType is file of character ;
 file data_out : IntegerFileType;
 signal byte_count : integer :=0;
@@ -135,9 +132,6 @@ process(clk)
 variable c : character;
 begin
 	if reset= '0' and falling_edge(clk) then
-			-- write(data_out, byte_reverse(conv_integer(r))); 
-			-- write(data_out, byte_reverse(conv_integer(b))); 
-			-- write(data_out, byte_reverse(conv_integer(g))); 
 			c := character'val(conv_integer(unsigned(r)));
 			write(data_out, c); 
 			c := character'val(conv_integer(unsigned(g)));
