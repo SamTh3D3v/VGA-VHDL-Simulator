@@ -1,9 +1,9 @@
 ------------------------------------------------------------
--- mini-projet VHDL
--- generation des signaux Pixel-clk et H_SYNC, V_SYNC 
--- Elhamer Oussama abdelkhalek & Mourad Hamouni
--- generation des horloges d'affichage si Reset = '0'
--- pas de controle du nombre de pixels recus
+-- VGA Simulator projet VHDL
+-- Generate the Pixel-clk, H_SYNC and V_SYNC clock signals 
+-- Elhamer Oussama abdelkhalek 
+-- Generate sync signals if Reset = '0'
+-- No control uppon the amount of pixel_clk edges received
 ------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
