@@ -1,9 +1,9 @@
 ------------------------------------------------------------
--- mini-projet VHDL
--- generation des signaux RGB selon le Pixel-clk
+-- VGA SimuLator projet VHDL
+-- Generate RGB colors based on the Pixel-clk
 -- Elhamer Oussama abdelkhalek 
--- generation du couleur d'un pixel chaque front montant du Pixel-clk
--- pas de controle du nombre de pixels recus
+-- Generate a Pixel color at each Pixel-clk rising edge
+-- No control on the count of received Pixel-clk edges
 ------------------------------------------------------------
 
 library IEEE;
@@ -30,7 +30,7 @@ variable  hcount : integer :=0;
 begin      
 if Reset='1'          
  then 
-  R <= "11111111" ; -- Initialisation
+  R <= "11111111" ; 
   G <= "11111111" ;
   B <= "11111111" ;
   vcount := 0;
