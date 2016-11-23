@@ -1,9 +1,9 @@
 ------------------------------------------------------------
--- mini-projet VHDL
--- Le systeme qui englobe les 3 modules 
--- Elhamer Oussama abdelkhalek & Mourad Hamouni
--- Permet de generer l'image ainsi que les deux signaux H_sync et V_sync 
--- Les trois modules sont initialisés avec la résolution 640 * 480
+-- VGA Simulator projet VHDL
+-- The whole system implementation that holds the three modules 
+-- Elhamer Oussama abdelkhalek 
+-- Generate a picture, save if on a spesific location on the disk, and generate the corresponding H_Sync and V_Sync
+-- the three modules are setted with the 640 * 480 resolution
 ------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
